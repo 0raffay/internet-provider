@@ -306,7 +306,7 @@ include("includes/site-info.php");
 						<div class="img_wrap">
 							<img src="assets/images/post-thumbnail.jpg" alt="Post Thumbnail">
 						</div>
-						<div class="blogCardText d-flex align-items-start">
+						<div class="blogCardText d-flex align-items-start gap-3">
 							<div class="text_wrap">
 								<h5 class="blogAuthor ff-primary">By Admin</h5>
 								<h6 class="blogTitle">Want Unlock your Block IP?</h6>
