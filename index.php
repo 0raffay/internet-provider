@@ -302,9 +302,20 @@ include("includes/site-info.php");
 			</div>
 			<div class="blogSlider">
 				<div class="item">
-					<div>
+					<div class="blogCard">
 						<div class="img_wrap">
 							<img src="assets/images/post-thumbnail.jpg" alt="Post Thumbnail">
+						</div>
+						<div class="blogCardText d-flex align-items-start">
+							<div class="text_wrap">
+								<h5 class="blogAuthor ff-primary">By Admin</h5>
+								<h6 class="blogTitle">Want Unlock your Block IP?</h6>
+								<p class="blogExcerpt">Lorem ipsum adipiscing elit Donec necip ipsum crtes elementum</p>
+							</div>
+							<div class="blogDate text-center">
+								<h6 class="fw-600 ff-primary fs-25 fc-primary">06</h6>
+								<p class="text-uppercase fc-neutral-400 fw-600">Sep</p>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  sliders();
+  header();
+
   $("input[type='tel'], input[type='number']").on("keyup", function () {
     var regex = /^[1-9][0-9]*$/;
 
@@ -10,7 +13,7 @@ $(document).ready(function () {
 
 
 function header() {
-  let stickyElement = "header";
+  let stickyElement = ".bottomHeader";
   let stickyClass = "header-fixed";
 
   let stickyOffset = $(stickyElement).offset().top;
@@ -20,4 +23,15 @@ function header() {
     if (scroll >= stickyOffset) sticky.addClass(stickyClass);
     else sticky.removeClass(stickyClass);
   });
+}
+
+
+function sliders() {
+  $(".blogSlider").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+  })
 }

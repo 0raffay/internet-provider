@@ -851,6 +851,18 @@ header * {
 .bottomHeader {
     background-color: #FFF;
     padding-block: 14px;
+    transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding-block: 2px;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 .headerTopInfoList {
@@ -1145,3 +1157,22 @@ header * {
 }
 
 /* Service end */
+
+/* Blog Start */
+.blogCardText {
+    padding-block: 30px;
+}
+
+.blogDate {
+    height: 80px;
+    width: 80px;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    background-color: var(--clr-primary-200);
+    flex-shrink: 0;
+}
+
+.blogAuthor {}
+
+/* Blog end */
