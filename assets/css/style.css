@@ -16,9 +16,13 @@
     box-sizing: border-box;
 }
 
-*:focus {
+*:not(.no-focus):focus {
     outline: none;
     border-bottom: 1px solid currentColor;
+}
+
+*.no-focus:focus {
+    outline: none;
 }
 
 a,
@@ -359,13 +363,15 @@ label {
 /* left || Right Sided Containers */
 @media only screen and (min-width: 1200px) {
     .container-left {
+        margin-inline: auto;
         margin-right: 0;
-        max-width: calc(1320px + ((100% - 1320px) / 2));
+        max-width: calc(1170px + ((100% - 1170px) / 2));
     }
 
     .container-right {
+        margin-inline: auto;
         margin-left: 0;
-        max-width: calc(1320px + ((100% - 1320px) / 2));
+        max-width: calc(1170px + ((100% - 1170px) / 2));
     }
 }
 
@@ -452,6 +458,7 @@ label {
     line-height: 1.1;
     margin-bottom: 15px;
     color: var(--clr-neutral-400);
+    text-transform: capitalize;
 }
 
 .section_text .section_label {
@@ -459,7 +466,7 @@ label {
 }
 
 .section_text.small {
-    max-width: 547px;
+    max-width: 614px;
     width: 100%;
 }
 
@@ -661,6 +668,10 @@ label {
 
 .fc-neutral-400 {
     color: var(--clr-neutral-400);
+}
+
+.fc-grey-700 {
+    color: #727272;
 }
 
 /* FONT COLORS END */
@@ -1017,3 +1028,120 @@ header * {
 }
 
 /* Action End */
+
+/* Feature start */
+.half-grey {
+    position: relative;
+}
+
+.half-grey::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--clr-grey-400);
+    z-index: -1;
+}
+
+.half-grey .container {
+    box-sizing: content-box;
+}
+
+.featureCard:where(:hover, :focus, :active) span,
+.featureCard:where(:hover, :focus, :active) h6 {
+    color: var(--clr-primary);
+}
+
+.featureCard {
+    position: relative;
+}
+
+.featureCard::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 153px;
+    height: 153px;
+    top: -10%;
+    left: -20%;
+    border-radius: 100%;
+    background-color: var(--clr-primary-300);
+    z-index: -1;
+    transform: scale(0);
+    transition: all 250ms ease;
+}
+
+.featureCard:where(:hover, :focus, :active)::after {
+    transform: scale(1);
+}
+
+/* Feature end */
+
+/* Service Start */
+.serviceCard .icon_wrap {
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+    background-color: #FFF;
+}
+
+.serviceCard {
+    margin-bottom: 25px;
+}
+
+@media (min-width: 992px) {
+    .serviceCard {
+        margin-bottom: 78px;
+    }
+}
+
+.serviceCard:nth-last-of-type(1) {
+    margin-bottom: 0;
+}
+
+.infoBox {
+    padding: 50px 45px;
+    background-color: var(--clr-primary);
+    max-width: 640px;
+    width: 100%;
+    position: absolute;
+    left: 40px;
+    top: -50px;
+}
+
+.infoBox .text_wrap {
+    max-width: 209px;
+    width: 100%;
+    position: relative;
+}
+
+.infoBox .text_wrap:nth-of-type(1)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -59px;
+    background-color: #FFF;
+    height: 100%;
+    width: 1px;
+    display: block;
+}
+
+.infoBox h6 {
+    color: #FFF;
+    font-weight: 400;
+    font-size: var(--fs-60);
+}
+
+.infoBox p {
+    color: #FFF;
+    font-size: var(--fs-20);
+    font-weight: 500;
+}
+
+/* Service end */

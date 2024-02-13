@@ -154,56 +154,164 @@ include("includes/site-info.php");
 	<!--==== About Our Company end ====-->
 
 	<!--==== Features Start ====-->
-	<section class="featureSection">
-		<div class="container">
+	<section class="featureSection half-grey">
+		<div class="container bg-white px-5 py-5 ">
 			<div class="section_text small mx-auto text-center mb-4 mb-md-5">
 				<h4 class="section_heading">Find Perfect Network Solutions</h4>
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
-					<div class="featureCard">
+					<a class="featureCard no-focus d-block" href="#">
 						<span class="icon_wrap mb-4 d-block">
 							<img src="assets/images/icons/solution-1.svg" alt="Reload Page">
 						</span>
 						<h6 class="fw-400 fs-20 lh-1-3 fc-dark mb-2">Corporate Internet</h6>
 						<p class="mb-3 fc-neutral-400 fs-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.</p>
-						<a href="" class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></a>
-					</div>
+						<span class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></span>
+					</a>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="featureCard">
+					<a class="featureCard no-focus d-block" href="#">
 						<span class="icon_wrap mb-4 d-block">
 							<img src="assets/images/icons/solution-2.svg" alt="Reload Page">
 						</span>
 						<h6 class="fw-400 fs-20 lh-1-3 fc-dark mb-2">Home Internet</h6>
 						<p class="mb-3 fc-neutral-400 fs-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.</p>
-						<a href="" class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></a>
-					</div>
+						<span class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></span>
+					</a>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="featureCard">
+					<a class="featureCard no-focus d-block" href="#">
 						<span class="icon_wrap mb-4 d-block">
 							<img src="assets/images/icons/solution-3.svg" alt="Reload Page">
 						</span>
 						<h6 class="fw-400 fs-20 lh-1-3 fc-dark mb-2">Cable TV</h6>
 						<p class="mb-3 fc-neutral-400 fs-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.</p>
-						<a href="" class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></a>
-					</div>
+						<span class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></span>
+					</a>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="featureCard">
+					<a class="featureCard no-focus d-block" href="#">
 						<span class="icon_wrap mb-4 d-block">
 							<img src="assets/images/icons/solution-4.svg" alt="Reload Page">
 						</span>
 						<h6 class="fw-400 fs-20 lh-1-3 fc-dark mb-2">Satellite Chanel </h6>
 						<p class="mb-3 fc-neutral-400 fs-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam.</p>
-						<a href="" class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></a>
-					</div>
+						<span class="ff-primary fs-15 fw-600">Discover More <i class="ms-1 fa-solid fa-arrow-right-long"></i></span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--==== Features End ====-->
+
+	<!--==== Services Start ====-->
+	<section class="servicesSection bg-grey-400 pb-0 overflow-x-hidden">
+		<div class="container">
+			<div class="row align-items-center mb-4 mb-md-5">
+				<div class="col-lg-7">
+					<h6 class="section_label label-before mb-3">Check Our Benefits</h6>
+					<h4 class="section_heading">Why You Should Choose
+						Our Services?</h4>
+				</div>
+				<div class="col-lg-5">
+					<p class="fc-grey-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit honcus
+						a turpis sit amet Donec nec elementum.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-left ">
+			<div class="row flex-nowrap">
+				<div class="col-lg-4">
+					<ul class="list-unstyled">
+						<li class="serviceCard d-flex align-items-center gap-15">
+							<span class="icon_wrap flex-shrink-0">
+								<img src="assets/images/icons/service-1.svg" alt="service icon">
+							</span>
+							<div class="text_wrap pe-md-3">
+								<h6 class="fs-22 fw-500 lh-1-2 fc-primary mb-1">Satellite TV
+								</h6>
+								<p class="fc-grey-700 pe-md-3">Lorem ipsum adipiscing elit Donec necip
+									ipsum crtes elementum</p>
+							</div>
+						</li>
+						<li class="serviceCard d-flex align-items-center gap-15">
+							<span class="icon_wrap flex-shrink-0">
+								<img src="assets/images/icons/service-2.svg" alt="service icon">
+							</span>
+							<div class="text_wrap pe-md-3">
+								<h6 class="fs-22 fw-500 lh-1-2 fc-primary mb-1">Home Security
+								</h6>
+								<p class="fc-grey-700 pe-md-3">Lorem ipsum adipiscing elit Donec necip
+									ipsum crtes elementum</p>
+							</div>
+						</li>
+						<li class="serviceCard d-flex align-items-center gap-15">
+							<span class="icon_wrap flex-shrink-0">
+								<img src="assets/images/icons/service-3.svg" alt="service icon">
+							</span>
+							<div class="text_wrap pe-md-3">
+								<h6 class="fs-22 fw-500 lh-1-2 fc-primary mb-1">24/7 Hour Support
+								</h6>
+								<p class="fc-grey-700 pe-md-3">Lorem ipsum adipiscing elit Donec necip
+									ipsum crtes elementum</p>
+							</div>
+						</li>
+						<li class="serviceCard d-flex align-items-center gap-15">
+							<span class="icon_wrap flex-shrink-0">
+								<img src="assets/images/icons/service-4.svg" alt="service icon">
+							</span>
+							<div class="text_wrap pe-md-3">
+								<h6 class="fs-22 fw-500 lh-1-2 fc-primary mb-1">Free Instalation
+								</h6>
+								<p class="fc-grey-700 pe-md-3">Lorem ipsum adipiscing elit Donec necip
+									ipsum crtes elementum</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="col-auto">
+					<div class="img_wrap position-relative">
+						<img src="assets/images/services-image.jpg" alt="Reload Page">
+						<div class="infoBox d-flex align-items-center justify-content-between">
+							<div class="text_wrap gap-3 d-flex align-items-center">
+								<h6>20</h6>
+								<p>Years
+									Experience</p>
+							</div>
+							<div class="text_wrap gap-3 d-flex align-items-center">
+								<h6>290</h6>
+								<p>Satellite
+									Chanel</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--==== Services End ====-->
+
+	<!--==== Blog Start ====-->
+	<section class="blogSection">
+		<div class="container pt-md-5">
+			<div class="section_text small mx-auto mb-4 mb-md-5 text-center">
+				<h6 class="section_label mb-3">BLOG & NEWS</h6>
+				<h4 class="section_heading">Insight from the latest news & blogs</h4>
+			</div>
+			<div class="blogSlider">
+				<div class="item">
+					<div>
+						<div class="img_wrap">
+							<img src="assets/images/post-thumbnail.jpg" alt="Post Thumbnail">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--==== Blog End ====-->
 
 
 
