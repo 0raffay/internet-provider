@@ -32,12 +32,12 @@ include("includes/site-info.php");
 	<section class="banner p-0 bg-grey-400">
 		<div class="bannerMain position-relative">
 			<div class="bannerImage">
-				<img src="assets/images/banners/home-banner.png" alt="Reload Page">
+				<img src="assets/images/banners/about-banner.png" alt="Reload Page">
 			</div>
 			<div class="bannerText">
 				<div class="container">
 					<div class="bannerTextContainer">
-						<h1 class="bannerHeading">Best Internet Services In Your Region</h1>
+						<h1 class="bannerHeading">Better Connections Start Here.</h1>
 						<p class="bannerSubtitle">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor risus id ante blandit, ac rhoncus metus tincidunt. Nunc ornare, lorem sed interdum fringilla, tellus leo hendrerit nisi, sed posuere quam enim sit amet purus. Maecenas luctus tortor eleifend ullamcorper aliquet.
 						</p>

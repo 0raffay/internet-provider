@@ -69,7 +69,7 @@
     </div>
 
     <div class="bottomFooter py-3 text-center">
-      <p class="fs-18 fw-400 lh-1-1">© Copyright <?php echo date("Y") ?> InternetProvider.com. All rights reserved.</p>
+      <p class="fs-17 fw-400 lh-1-1">© Copyright <?php echo date("Y") ?> InternetProvider.com. All rights reserved.</p>
     </div>
   </div>
 </footer>

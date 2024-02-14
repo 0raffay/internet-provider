@@ -1160,7 +1160,7 @@ header * {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: var(--clr-grey-400);
+    background-color: var(--clr-grey-500);
     z-index: -1;
 }
 
@@ -1462,7 +1462,7 @@ footer * {
     display: block;
     font-size: var(--fs-16);
     margin-bottom: 15px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .footerList li a:where(:hover, :focus) {
@@ -1472,7 +1472,7 @@ footer * {
 }
 
 .topFooter {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #433739;
     padding-bottom: 40px;
 }
 
