@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 
-*:not(.no-focus):focus {
+*:not(.no-focus, .btn, button, input, select, textarea):focus {
     outline: none;
     border-bottom: 1px solid currentColor;
 }
@@ -168,14 +168,15 @@ label {
     --_size: 16px;
 
     display: block;
-    background: #D9D9D9;
+    background: transparent;
 
     height: var(--_size);
     width: var(--_size);
 
     border-radius: 100%;
+    border: 1px solid #AFAFAF;
 
-    margin: 0 2px;
+    margin: 0 5px;
 
     padding: 0;
 
@@ -183,16 +184,9 @@ label {
     transform-origin: center;
 }
 
+.slick-dots li button:hover,
 .slick-dots li.slick-active button {
     background: var(--clr-primary);
-}
-
-.slick-dots li.slick-active~li button {
-    --_size: 14px;
-}
-
-.slick-dots li.slick-active~li:last-child button {
-    --_size: 12px;
 }
 
 .slick-slide {
@@ -670,6 +664,10 @@ label {
     color: var(--clr-neutral-400);
 }
 
+.fc-grey-600 {
+    color: #666666;
+}
+
 .fc-grey-700 {
     color: #727272;
 }
@@ -852,6 +850,7 @@ header * {
     background-color: #FFF;
     padding-block: 14px;
     transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 }
 
 .header-fixed {
@@ -910,6 +909,108 @@ header * {
     font-size: var(--fs-50);
     color: var(--clr-secondary);
 }
+
+.burgerButton {
+    width: 30px;
+    padding: 2px !important;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: none;
+}
+
+/* Rf Mobile  Menu */
+.rfMobileMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    padding: 0px;
+    width: 100%;
+    background: #FFF;
+    border-right: 1px solid #e7e7e7;
+    transform: translateX(-100%);
+    transition: transform 200ms ease;
+    z-index: 10;
+}
+
+.rfMobileMenu.active {
+    transform: translateX(0);
+}
+
+.rfMobileMenuHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 0;
+    border-bottom: 1px solid #E3E4E6;
+}
+
+.rfMobileMenuClose i {
+    color: #000;
+    font-size: 2rem;
+}
+
+.rfMobileMenuButton {
+    font-size: 19px;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 1px solid #E3E4E6;
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.rfMobileMenuButton.active {
+    background-color: #F4F5F6;
+}
+
+.rfMobileMenuButton i.icon {
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.rfMobileMenuButton i.icon::before {
+    content: "\ea4e";
+}
+
+.rfInnerMobileMenuList {
+    padding-block: 0.25rem;
+    border-bottom: 1px solid #E3E4E6;
+}
+
+.rfInnerMobileMenuButton {
+    font-size: 16px;
+    padding-block: 12px;
+    font-weight: 500;
+    padding-inline: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .bottomHeader nav,
+    .bottomHeader .headerButton {
+        display: none;
+    }
+
+    .rfMobileMenu,
+    .burgerButton {
+        display: block;
+    }
+}
+
 
 /* Banner start */
 
@@ -979,8 +1080,6 @@ header * {
 
 /* Action Start */
 .actionCard {
-    max-width: 370px;
-    width: 100%;
     margin-inline: auto;
     padding: 26px 15px 33px;
     background-color: #FFF;
@@ -988,6 +1087,13 @@ header * {
     cursor: pointer;
     overflow: hidden;
     transition: all 100ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (min-width:992px) {
+    .actionCard {
+        max-width: 370px;
+        width: 100%;
+    }
 }
 
 .actionCard::after {
@@ -1067,6 +1173,14 @@ header * {
     color: var(--clr-primary);
 }
 
+.featureCard:where(:hover, :focus, :active) span,
+.featureCard:where(:hover, :focus, :active) h6,
+.featureCard:where(:hover, :focus, :active) p {
+    position: relative;
+    z-index: 2;
+}
+
+
 .featureCard {
     position: relative;
 }
@@ -1081,7 +1195,7 @@ header * {
     left: -20%;
     border-radius: 100%;
     background-color: var(--clr-primary-300);
-    z-index: -1;
+    z-index: 1;
     transform: scale(0);
     transition: all 250ms ease;
 }
@@ -1159,6 +1273,14 @@ header * {
 /* Service end */
 
 /* Blog Start */
+.blogCard {
+    display: block;
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: 2px;
+}
+
 .blogCardText {
     padding-block: 30px;
 }
@@ -1193,4 +1315,183 @@ header * {
     font-size: var(--fs-16);
 }
 
+.blogCard:where(:hover, :focus, :active) {
+    border-bottom: none;
+}
+
+.blogCard:where(:hover, :focus, :active) .blogDate *,
+.blogCard:where(:hover, :focus, :active) .blogDate {
+    background-color: var(--clr-primary);
+    color: #FFF;
+}
+
+.blogCard:where(:hover, :focus, :active) .blogTitle {
+    color: var(--clr-primary);
+}
+
 /* Blog end */
+
+/* Testimonial start */
+.testimonialSliderContainer {
+    position: absolute;
+    max-width: 787px;
+    width: 100%;
+    min-height: 359px;
+    /* display: grid;
+    place-content: center; */
+    /* padding: 10px; */
+    border: 1px solid #EFEFEF;
+    border-radius: 20px;
+    right: -10px;
+    bottom: 20px;
+    background-image: url(../images/testimonial-bg.png);
+    background-repeat: no-repeat;
+    padding: 55px 58px 31px 76px;
+}
+
+.testimonialCard>p {
+    max-width: 558px;
+    width: 100%;
+}
+
+.testimonialSliderButtons {
+    position: absolute;
+    bottom: 70px;
+    right: 60px;
+}
+
+.testimonialSliderButtons button {
+    height: 44px;
+    width: 44px;
+    display: grid;
+    place-content: center;
+    background-color: #e9e9e9;
+    color: var(--clr-neutral-400);
+    border-radius: 100%;
+    font-size: 22px;
+}
+
+.testimonialSliderButtons button:where(:active, :focus, :hover) {
+    background-color: var(--clr-primary);
+    color: #FFF;
+}
+
+/* Testimonial end */
+
+/* Newsletter start */
+.newsletterSection {
+    position: relative;
+    top: calc(var(--controller) * -1);
+}
+
+.newsLetterMain {
+    padding: 57px 70px 54px;
+    background-color: var(--clr-primary);
+}
+
+.newsletterInput input {
+    padding: 15px 27px;
+    border-radius: 0px;
+    outline: none;
+    border: none;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 397px;
+    width: 100%;
+}
+
+.newsletterInput button:where(:hover, :focus) {
+    background-color: var(--clr-primary-700) !important;
+    color: #FFF !important;
+    opacity: .8;
+}
+
+/* Newsletter end */
+
+/* footer start */
+
+footer {
+    --controller: 130px;
+    margin-top: var(--controller);
+    background-color: #020202;
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+footer * {
+    color: white;
+}
+
+.logo.footerLogo {
+    color: white;
+    text-transform: uppercase;
+}
+
+.footerSocialList li a {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 18px;
+    background-color: #343434;
+}
+
+.footerSocialList li a:is(:hover, :focus, :active) {
+    background-color: var(--clr-primary);
+}
+
+.footerTitle {
+    font-size: var(--fs-22);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.footerList {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+.footerList li a {
+    display: block;
+    font-size: var(--fs-16);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footerList li a:where(:hover, :focus) {
+    color: #FFF;
+    text-decoration: underline;
+    border-bottom: none;
+}
+
+.topFooter {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+    .footerTitle {
+        margin-bottom: 50px;
+    }
+
+    .footerList {
+        margin-bottom: 0;
+    }
+
+    .footerList li a {
+        margin-bottom: 15px;
+    }
+
+    .topFooter {
+        padding-bottom: 90px;
+    }
+}
+
+/* footer end */

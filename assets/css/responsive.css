@@ -4,7 +4,29 @@
 
 @media only screen and (max-width: 1360px) {}
 
-@media only screen and (max-width: 1240px) {}
+@media only screen and (max-width: 1240px) {
+    .testimonialSliderContainer {
+        position: static;
+        background: var(--clr-grey-400);
+        margin: 0 auto;
+        width: 100%;
+        max-width: 100%;
+        padding: 40px 15px;
+    }
+
+    .testimonialCard>p {
+        max-width: 100%;
+    }
+
+    .testimonialSliderButtons {
+        position: static;
+        justify-content: center !important;
+    }
+
+    .half-grey .container {
+        box-sizing: border-box;
+    }
+}
 
 @media only screen and (max-width: 1170px) {}
 
@@ -12,19 +34,74 @@
     :root {
         --font-controller: 2px;
     }
+
+    .infoBox {
+        position: static;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .infoBox .text_wrap:nth-of-type(1)::after {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     :root {
         --font-controller: 3px;
     }
+
+    br {
+        display: none;
+    }
+
+    .newsletterSection {
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    .newsLetterMain {
+        padding: 20px;
+    }
+
+    footer {
+        --controller: 0;
+        padding: var(--section-padding);
+    }
+
+    .newsletterInput input,
+    .newsletterInput button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .newsletterInput {
+        margin-top: 30px;
+    }
+
+    .actionArrow {
+        display: none;
+    }
+
+    .bannerImage img {
+        object-fit: cover;
+        object-position: 60%;
+    }
+
+    .half-grey::after {
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 580px) {
-}
+@media only screen and (max-width: 580px) {}
 
 @media only screen and (max-width: 480px) {
     :root {
         --font-controller: 3.5px;
+        --section-padding: 30px;
+    }
+
+    .testimonialSliderContainer {
+        padding-block: 15px;
     }
 }
