@@ -51,7 +51,7 @@
         <nav>
           <ul class="navList list-unstyled d-flex align-items-center justify-content-center gap-5">
             <li><a href="" class="active">Home</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="about-us.php">About Us</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Blogs</a></li>
           </ul>

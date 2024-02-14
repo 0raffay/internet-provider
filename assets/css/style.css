@@ -391,7 +391,7 @@ label {
     transition: all 250ms ease;
     font-family: var(--ff-primary);
     color: #fff;
-    gap: 5px;
+    gap: 15px;
 
 }
 
@@ -409,7 +409,7 @@ label {
 }
 
 .btn-size-lg {
-    min-width: 171px;
+    min-width: 183px;
 }
 
 .btn-primary {
