@@ -50,14 +50,14 @@
         </div>
         <nav>
           <ul class="navList list-unstyled d-flex align-items-center justify-content-center gap-5">
-            <li><a href="" class="active">Home</a></li>
+            <li><a href="index.php" class="active">Home</a></li>
             <li><a href="about-us.php">About Us</a></li>
-            <li><a href="">Services</a></li>
+            <li><a href="pricing.php">Pricing</a></li>
             <li><a href="">Blogs</a></li>
           </ul>
         </nav>
         <div class="headerButton">
-          <a href="" class="btn btn-primary">Contact Us <img src="assets/images/icons/arrow-right.svg" alt=""></a>
+          <a href="contact-us.php" class="btn btn-primary">Contact Us <img src="assets/images/icons/arrow-right.svg" alt=""></a>
         </div>
       </div>
 

@@ -1495,3 +1495,311 @@ footer * {
 }
 
 /* footer end */
+
+/* Promotion start */
+.orientation-90 {
+    writing-mode: vertical-rl
+}
+
+.promotionCard {
+    z-index: -1;
+}
+
+.promotionLeftButton,
+.promotionRightButton {
+    max-width: 170px;
+    width: 100%;
+    min-height: 406px;
+    display: grid;
+    place-content: center;
+    gap: 20px;
+}
+
+.promotionLeftButton {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    background: url(../images/promotion-left-bg.png) center/cover no-repeat;
+
+}
+
+.promotionLeftButton::after {
+    content: "";
+    background-color: var(--clr-primary);
+    position: absolute;
+    transform: rotate(-15deg);
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    z-index: -1;
+}
+
+.promotionRightButton {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    background: url(../images/promotion-right-bg.png) center/cover no-repeat;
+}
+
+.promotionButtons button {
+    height: 82px;
+    width: 82px;
+    display: grid;
+    place-content: center;
+    border: 1px solid #fff;
+    border-radius: 100%;
+}
+
+.promotionButtons button:where(:hover, :focus) {
+    background-color: var(--clr-primary);
+    color: #FFF;
+    border: 1px solid var(--clr-primary);
+}
+
+/* Promotion end */
+
+/* Limitless Start */
+.limitlessCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8.098px;
+    border: 1px solid rgba(112, 112, 112, 0.15);
+    gap: 22px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #FFF;
+    transition: all 100ms ease;
+}
+
+
+.limitlessCards p {
+    padding-right: 59px;
+    color: #646A7A;
+}
+
+.limitlessCards .icon_wrap {
+    border-radius: 8.1px;
+    transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
+    min-height: 113px;
+    display: grid;
+    place-content: center;
+    min-width: 103px;
+}
+
+.limitlessCards:hover {
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.20);
+}
+
+.limitlessCards:hover .icon_wrap {
+    background-color: var(--clr-primary);
+}
+
+.limitlessCards:hover img {
+    filter: brightness(200);
+}
+
+/* Limitless end */
+
+/* Globe start */
+.counterCards {
+    max-width: 228px;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Globe end */
+
+/* Pricing start */
+.pricingCard {
+    background-image: url(../images/icons/pricing-bg.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+    padding: 50px 33px 33px;
+}
+
+.pricingCard.special {
+    background-color: #010101;
+}
+
+.pricingLabel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    font-weight: 600;
+    font-size: var(--fs-16);
+    line-height: 1.4;
+    padding: 5px;
+    background-color: var(--clr-primary);
+    color: #FFF;
+    font-family: var(--ff-primary);
+    min-width: 35px;
+    height: 130px;
+    display: grid;
+    place-content: center;
+    text-transform: uppercase;
+    transform: rotate(-180deg);
+}
+
+.pricingTitle {
+    color: #000;
+    font-size: var(--fs-25);
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.pricingCard.special .pricingTitle {
+    color: #FFF;
+}
+
+.pricingSubtitle {
+    font-size: var(--fs-18);
+    color: #9f9f9f;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.pricingPrice {
+    font-size: var(--fs-55);
+    font-family: var(--ff-secondary);
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.pricingCard.special .pricingPrice {
+    color: #FFF;
+}
+
+.pricingFeaturesList {
+    margin-bottom: 40px;
+}
+
+.pricingFeaturesList li {
+    font-size: var(--fs-18);
+    font-weight: 400;
+    font-family: var(--ff-primary);
+    color: #9f9f9f;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 18px;
+}
+
+.pricingFeaturesList li::before {
+    content: "";
+    height: 11px;
+    width: 11px;
+    background-color: var(--clr-primary);
+}
+
+.pricingIconList {
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+.pricingIconList li {
+    height: 53px;
+    width: 53px;
+    border-radius: 100%;
+    background-color: #d9d9d9;
+    display: grid;
+    place-content: center;
+    position: relative;
+}
+
+.pricingCard.special .pricingIconList li {
+    background-color: #FFF;
+}
+
+.pricingIconList li:not(:first-of-type) {
+    margin-left: 10px;
+}
+
+.pricingIconList li::after {
+    content: "";
+    height: 1px;
+    background-color: var(--clr-primary);
+    width: 44px;
+    margin-right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 10px);
+    display: none;
+}
+
+.pricingCard.special .pricingIconList li::after {
+    background-color: #FFF;
+}
+
+.pricingIconList li:has(+ *)::after {
+    display: block;
+}
+
+/* Pricing end */
+
+/* Contact start */
+.contactInfoList li {
+    margin-bottom: 20px;
+}
+
+.contactInfoList li span {
+    height: 82px;
+    width: 82px;
+    background: linear-gradient(180deg, #CF0631 0%, #FF1749 100%);
+    display: grid;
+    place-content: center;
+}
+
+.contactFormContainer {
+    padding: 40px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.contactFormContainer :where(input, select, textarea) {
+    font-size: var(--fs-18);
+    line-height: 1;
+    font-weight: 400;
+    color: #000;
+    min-height: 43px;
+    width: 100%;
+    display: block;
+    background-color: #f3f3f3;
+    border-radius: 0;
+    padding: 21px 24px;
+    border: none;
+    outline: none;
+}
+
+.contactFormContainer textarea {
+    min-height: 156px;
+}
+
+.contactFormContainer :where(input, select, textarea) ::placeholder {
+    color: #828282;
+}
+
+.contactMapContainer iframe {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .contactInfoList li {
+        margin-bottom: 40px;
+    }
+
+    .contactFormContainer {
+        padding: 42px 41px;
+    }
+}
+
+/* Contact end */

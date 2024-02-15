@@ -1,10 +1,10 @@
 <?php
 /* --- Site urls --- */
 //Local
-$siteURL = "https://localhost/";
+// $siteURL = "https://localhost/internet-provider/";
 
 //Live:
-// $siteURL = "https://live.com/";
+$siteURL = "https://arraydigitals.com/internet-provider/";
 /* --- Site urls --- */
 
 
@@ -17,7 +17,10 @@ $siteAddress = "Manchester 21, Zurich, CH";
 
 
 /* --- Og data --- */
-$ogContent1 = "";
-$ogContent2 = "";
-$ogImgPath =  "$siteURL/assets/images/og.png";
+$ogContent1 = "Best Internet Services In Your Region
+";
+$ogContent2 = "Over 7,000,000 people use our free tool every year to search 1,600+ internet providers across the US.
+
+";
+$ogImgPath =  "$siteURL/assets/images/og.jpg";
 /* --- Og data --- */
